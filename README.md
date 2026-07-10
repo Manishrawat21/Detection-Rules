@@ -12,8 +12,8 @@ This repository contains validated detection rules for adversary behaviors obser
 
 | MITRE Technique | Rule Name | Severity | Status |
 |----------------|-----------|----------|--------|
-| T1003.001 | [LSASS Process Access with Full Permissions](https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Lsass_Process/Lsass_process_detection_rule.yaml) | High | Tested |
-| T1059.001, T1027 | [Suspicious PowerShell Execution Patterns](https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml) | High | Tested |
+| T1003.001 | [LSASS Process Access with Full Permissions](https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Lsass_Process/Lsass_process_detection_rule.yaml) | High | Tested |
+| T1059.001, T1027 | [Suspicious PowerShell Execution Patterns](https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml) | High | Tested |
 | T1547, T1059.006 | [Abnormal DLL Loads](https://github.com/manishrawat21/Detection-Rules/tree/main/Abnormal%20DLL%20loads/Detection_Rule.yaml) | High | Tested |
 
 ## Rules
@@ -26,17 +26,17 @@ This repository contains validated detection rules for adversary behaviors obser
 - **Validated Against:** APT29 credential dumping at 23:05:16, ProcessID 3852
 - **False Positives:** Low (security tools, antivirus)
 
-**Splunk Query:** [View SPL](https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Lsass_Process/Validated_SPL_Query.md)
+**Splunk Query:** [View SPL](https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Lsass_Process/Validated_SPL_Query.md)
 
 ### Execution
 
-**[Suspicious PowerShell Execution Patterns](https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml)**
+**[Suspicious PowerShell Execution Patterns](https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml)**
 - **Detects:** PowerShell with encoding, Office-spawned PowerShell with evasion or network activity
 - **MITRE:** T1059.001 (PowerShell), T1027 (Obfuscation), T1566.001 (Phishing)
 - **Validated Against:** APT29 dataset EventID 1 PowerShell executions
 - **False Positives:** Medium (legitimate automation, software deployment)
 
-**Splunk Query:** [View SPL](https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Powershell_Commands/suspicious-powershell-execution.spl)
+**Splunk Query:** [View SPL](https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Powershell_Commands/suspicious-powershell-execution.spl)
 
 **[Abnormal DLL Loads](https://github.com/manishrawat21/Detection-Rules/tree/main/Abnormal%20DLL%20loads/Detection_Rule.yaml)**
 - **Detects:** Detects unsigned executables in Temp loading modules or DLLs
@@ -51,13 +51,13 @@ This repository contains validated detection rules for adversary behaviors obser
 ### Convert to Splunk
 
 ```bash
-sigma convert -t splunk -p sysmon https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml
+sigma convert -t splunk -p sysmon https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml
 ```
 
 ### Convert to Elastic
 
 ```bash
-sigma convert -t elasticsearch -p sysmon https://github.com/Manishrawat21/SOC_Dectection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml
+sigma convert -t elasticsearch -p sysmon https://github.com/Manishrawat21/SOC_Detection_Rules/blob/main/Suspicious_Powershell_Commands/Detection_Rule.yaml
 ```
 
 ### Test in Your Environment
@@ -108,5 +108,5 @@ Detection Engineer | Threat Hunter | CompTIA Security+ & CEH Certified
 
 ## License
 
-MIT License - Use freely, attribution appreciated# SOC_Dectection_Rules
+MIT License - Use freely, attribution appreciated# SOC_Detection_Rules
 Written some detection rules to catch some abnormal activites. These are writen after my APT29 detection series, I hope these works for as they did for myself.
