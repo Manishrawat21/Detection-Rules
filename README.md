@@ -100,7 +100,7 @@ Submit a pull request or open an issue.
 ## Author
 
 **Manish Rawat**
-- LinkedIn: [linkedin.com/in/rawat-manish-mr2000](https://www.linkedin.com/in/manishrawat-soc/)
+- LinkedIn: [linkedin.com/in/rawat-manish-mr2000](https://www.linkedin.com/in/manishrawat21/)
 - Substack: [Detection Desk](https://manishrawat21.substack.com)
 - Email: rawatmanish21@outlook.com
 
